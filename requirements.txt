@@ -1,0 +1,16 @@
+# Requires Python 3.10-3.12 (CadQuery's OCC kernel lacks 3.13+ wheels).
+# Pinned to the versions this skill was last tested against; bump
+# deliberately and re-run all example scripts + previews if you upgrade.
+cadquery>=2.6.1,<3
+trimesh>=4.0,<5
+pyrender>=0.1.45,<0.2
+Pillow>=13,<14
+numpy>=1.24,<3
+lxml>=4.9,<7
+
+# Analysis / mesh repair (used by analyze_stl.py and the structural
+# review workflow). Not needed for plain model generation + preview.
+shapely>=2.0,<3        # section polygon analysis
+rtree>=1.0,<2          # enclosure tree for section polygons
+manifold3d>=3.0,<4     # repair degeneracies left by OCC sphere booleans
+matplotlib>=3.7,<4     # plotting cross-sections
